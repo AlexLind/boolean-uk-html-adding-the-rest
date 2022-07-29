@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.container {
+    height:1080px;
+    display: grid;
+    grid-template: 
+    "header header header header" 60px
+    "left-menu main right-menu shortcuts" 1fr /
+    2fr 4fr 2.5fr 60px ;
+    gap: 5px;
+   }
+
+ div.left-menu {
+    grid-area: left-menu;
+    border: dashed 2px teal;
+    display: grid;
+    grid-template-rows: 80px 1fr 100px 200px;
+ }
+ .left-menu .in-left-menu {
+   margin: 5px;
+   border: dashed 2px greenyellow;
+ }
+ div.header {
+    grid-area: header;
+    border: dashed 2px blueviolet;
+    display: grid;
+    grid-template-columns: 50px 200px 1fr 200px 100px;
+ }
+ .header .in-header {
+   margin: 5px;
+   border: dashed 2px greenyellow;
+ }
+ div.main {
+    grid-area: main;
+    grid-auto-rows: 100px;
+    border: dashed 2px aqua;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+ }
+ .main .in-main-header {
+   margin: 5px;
+   border: dashed 2px greenyellow;
+ }
+ .main .in-main-messages {
+   margin: 5px;
+   border: dashed 2px greenyellow;
+   display: grid;
+   grid-auto-rows: 50px;
+ }
+ .main .in-main-messages .message {
+   margin: 5px;
+   border: dashed 2px greenyellow;
+ }
+ div.right-menu {
+    grid-area: right-menu;
+    border: dashed 2px rgb(223, 212, 57);
+    display: grid;
+    grid-template-rows: 120px 300px 250px 1fr;
+
+ }
+ .right-menu .in-right-menu {
+   margin: 5px;
+   border: dashed 2px greenyellow;
+ }
+ .right-menu .in-right-menu-theme {
+   margin: 5px;
+   border: dashed 2px greenyellow;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: repeat(2, 1fr);
+ }
+ .right-menu .in-right-menu-density {
+   margin: 5px;
+   border: dashed 2px greenyellow;
+   display: grid;
+   grid-template-rows: repeat(3, 1fr);
+ }
+ .right-menu .in-right-menu-density .row {
+   margin: 5px;
+   border: dashed 2px greenyellow;
+ }
+ .right-menu .in-right-menu-theme .image {
+   margin: 5px;
+   border: dashed 2px greenyellow;
+ }
+ div.shortcuts {
+    grid-area: shortcuts;
+    border: dashed 2px rgb(241, 79, 67);
+    display: grid;
+    grid-template-rows: 200px 1fr;
+ }
+ .shortcuts .in-shortcuts {
+   margin: 5px;
+   border: dashed 2px greenyellow;
+ }
+ .shortcuts .in-shortcuts-plus {
+   margin: 5px;
+   border: dashed 2px greenyellow;
+   display: grid;
+   grid-auto-rows: 80px;
+ }
+ .shortcuts .in-shortcuts-plus .shortcut {
+   margin: 5px;
+   border: dashed 2px greenyellow;
+ }

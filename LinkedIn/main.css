@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-size: xx-large;
+    text-transform: uppercase;
+    text-align: center;
+    justify-content: center;
+    line-height: 100px;
+}
+
+.container {
+    height: 1000px;
+    display: grid;
+    grid-template: 
+    "header header header header header" 100px
+    "left-space profile post news right-space" 1fr
+    "left-space profile main news right-space" 1fr
+    "left-space organisation main learning right-space" 1fr
+    "left-space recent main feed right-space" 2fr /
+    5fr 240px 400px 240px 5fr ;
+
+    grid-gap: 20px;
+ }
+
+ @media screen and (max-width: 1000px) {
+   .container {
+      grid-template: 
+      "header header header  header" 100px
+      "left-space profile post right-space" 1fr
+      "left-space profile main right-space" 1fr
+      "left-space organisation main right-space" 1fr
+      "left-space recent main right-space" 2fr /
+      5fr 240px 400px 5fr ;
+  
+      grid-gap: 20px;
+   }
+   .feed, .learning, .news{
+      display: none;
+   }
+ }
+ @media screen and (max-width: 750px) {
+   .container {
+      grid-template: 
+      "header header header" 100px
+      "left-space profile right-space" 2fr
+      "left-space post right-space" 1fr
+      "left-space main right-space" 10fr /
+      4fr 500px 4fr ;
+  
+      grid-gap: 20px;
+   }
+   .feed, .learning, .news, .recent, .organisation{
+      display: none;
+   }
+ }
+ @media screen and (max-width: 600px) {
+   .container {
+      grid-template: 
+      " header " 100px
+      " profile " 2fr
+      " post " 1fr
+      " main " 10fr /
+       1fr  ;
+  
+      grid-gap: 20px;
+   }
+   .feed, .learning, .news, .recent, .organisation, .right-space, .left-space{
+      display: none;
+   }
+ }
+
+ div.left-space {
+    grid-area: left-space;
+    background-color: white;
+ }
+ div.header {
+    grid-area: header;
+    background-color: beige;
+ }
+ div.profile {
+    grid-area: profile;
+    background-color: coral;
+ }
+ div.post {
+    grid-area: post;
+    background-color: cadetblue;
+ }
+ div.news {
+    grid-area: news;
+    background-color: greenyellow;
+ }
+ div.organisation {
+    grid-area: organisation;
+    background-color: grey;
+ }
+ div.main {
+    grid-area: main;
+    background-color: hotpink;
+ }
+ div.learning {
+    grid-area: learning;
+    background-color: teal;
+ }
+ div.recent {
+    grid-area: recent;
+    background-color: thistle;
+ }
+ div.feed {
+    grid-area: feed;
+    background-color: rgb(23, 0, 128);
+ }
+ div.right-space {
+    grid-area: right-space;
+    background-color: white;
+ }
